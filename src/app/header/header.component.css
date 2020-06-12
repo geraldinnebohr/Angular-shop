@@ -1,0 +1,7 @@
+nav > a {  /* cualquier elemento dentro del nav */
+  padding: 5px;
+  text-decoration: none;
+}
+nav > a.active {  /* clase active */
+  background-color: yellow;
+}
