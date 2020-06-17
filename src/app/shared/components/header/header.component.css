@@ -5,3 +5,7 @@ nav > a {  /* cualquier elemento dentro del nav */
 nav > a.active {  /* clase active */
   background-color: yellow;
 }
+
+.header-row {
+  width: 100%;
+}
