@@ -1,10 +1,30 @@
-:host {
+/* :host {
   margin: 2px;
   border: 1px solid black;
   border-radius: 5px;
   display: block;
+} */
+
+.crop-image {
+  height: 300px;
+  width: 100%;
+  display: block;
+  /* overflow: hidden;
+  position: relative; */
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+mat-card {
+  margin-top: 20px;
 }

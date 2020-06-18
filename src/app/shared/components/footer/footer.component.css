@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  margin-top: 20px;
+}
+
+.footer div {
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  padding: 0 4px;
+}
