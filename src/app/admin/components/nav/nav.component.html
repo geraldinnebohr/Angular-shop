@@ -5,13 +5,14 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="/admin">Home</a>
       <a mat-list-item routerLink="/admin/create">Crear Producto</a>
-      <a mat-list-item routerLink="/admin/table">Ver Tabla</a>
-      <a mat-list-item routerLink="/admin/dashboard">Ir a Dashboard</a>
+      <a mat-list-item routerLink="/admin/table">Inventario</a>
+      <a mat-list-item routerLink="/admin/products">Productos</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="row between-xs middle-xs header-row">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -21,6 +22,9 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>my-app</span>
+      <a mat-raised-button routerLink='products/create'>
+        <mat-icon>add_circle_outline</mat-icon>Nuevo Producto
+      </a>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
