@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 
 import { Product } from '../../../product.model';
+import { CartService } from '../../../core/services/cart.service';
 
 @Component({
 	selector: 'app-product',
@@ -23,7 +24,9 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
 	today = new Date();
 
-  constructor() {
+  constructor(
+    private cartService: CartService
+  ) {
     console.log('1. este es el constructor');
   }
 
@@ -45,7 +48,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   addCart() {
-    console.log('method addCart in product component');
-    this.productClicked.emit(this.product.id);
+    console.log('producto añadido al carrito');
+    this.cartService.addCart(this.product);
 	}
 }
